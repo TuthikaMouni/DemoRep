@@ -1,0 +1,57 @@
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	id="WebApp_ID" version="2.5">
+	<display-name>login</display-name>
+	<servlet>
+		<description></description>
+		<display-name>LoginController</display-name>
+		<servlet-name>LoginController</servlet-name>
+		<servlet-class>com.login.controller.LoginController</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>CreateUserController</display-name>
+		<servlet-name>CreateUserController</servlet-name>
+		<servlet-class>com.login.controller.CreateUserController</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>PasswordController</display-name>
+		<servlet-name>PasswordController</servlet-name>
+		<servlet-class>com.login.controller.PasswordController</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>ProfileController</display-name>
+		<servlet-name>ProfileController</servlet-name>
+		<servlet-class>com.login.controller.ProfileController</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>LoginController</servlet-name>
+		<url-pattern>/LoginController</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>CreateUserController</servlet-name>
+		<url-pattern>/CreateUserController</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>PasswordController</servlet-name>
+		<url-pattern>/PasswordController</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ProfileController</servlet-name>
+		<url-pattern>/ProfileController</url-pattern>
+	</servlet-mapping>
+	
+	<welcome-file-list>
+	  <welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+
+</web-app>
+
+
