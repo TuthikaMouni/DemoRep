@@ -10,10 +10,11 @@ public class Connection {
     private static final String USERNAME = "root";
     private static final String PASSWORD = "root";
     private static final String MAX_POOL = "250";
-    private static final String SELECT_SQL_QUERY = "select * from mouni_test.employee";
-    private static final String CREATE_SQL_QUERY = "insert into mouni_test.employee(emp_name,emp_id,emp_salary,emp_contact) values(?,?,?,?)";
-    private static final String UPDATE_SQL_QUERY = "update mouni_test.employee set emp_salary=? where emp_id=?";
-    private static final String DELETE_SQL_QUERY = "delete from mouni_test.employee where emp_id=?";
+    private static final String SELECT_SQL_QUERY = "select * from mouni_test.employee1";
+    private static final String SELECT_SQL_QUERY1 =  "CREATE TABLE person_details.testlogintable (person_id INT NOT NULL, person_name VARCHAR(45) NOT NULL, PRIMARY KEY (person_id))";
+    private static final String CREATE_SQL_QUERY = "insert into mouni_test.employee1(emp_name,emp_id,emp_salary,emp_contact,emp_dob,emp_doj) values(?,?,?,?,?,?)";
+    private static final String UPDATE_SQL_QUERY = "update mouni_test.employee1 set emp_salary=? where emp_id=?";
+    private static final String DELETE_SQL_QUERY = "delete from mouni_test.employee1 where emp_id=?";
     // init connection object
     private static java.sql.Connection connection;
     // init properties object
@@ -85,6 +86,8 @@ public class Connection {
 		      preparedStmt.setInt (2, 5);
 		      preparedStmt.setInt(3, 30000);
 		      preparedStmt.setString(4, "9100744364");
+		      preparedStmt.setString(5, "28-07-1996");
+		      preparedStmt.setString(6, "14-02-2018");
 		      preparedStmt.execute();
 			disconnect();	
 		} catch (SQLException e) {
@@ -95,8 +98,8 @@ public class Connection {
     public static void delete(){
     	try {
 			PreparedStatement preparedStmt = connection.prepareStatement(DELETE_SQL_QUERY);
-			preparedStmt.setInt (1, 5);
-			preparedStmt.execute();
+			//preparedStmt.setInt (1, 5);
+			//preparedStmt.execute();
 			disconnect();
     	}
     	catch(SQLException e) {
@@ -106,9 +109,18 @@ public class Connection {
     
 	public static void main(String[] args) {
 		connection = connect();
+		Statement psmt= null;
+		try {
+			psmt = connection.createStatement();
+			psmt.executeUpdate(SELECT_SQL_QUERY1);
+		} catch (SQLException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		
 		//select();
 		//create();
 		//update();
-		delete();
+		//delete();
 	}
 }
