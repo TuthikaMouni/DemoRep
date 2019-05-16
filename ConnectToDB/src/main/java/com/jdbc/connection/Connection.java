@@ -108,7 +108,7 @@ public class Connection {
     }
     
 	public static void main(String[] args) {
-		connection = connect();
+		/*connection = connect();
 		Statement psmt= null;
 		try {
 			psmt = connection.createStatement();
@@ -116,9 +116,9 @@ public class Connection {
 		} catch (SQLException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
-		}
+		}*/
 		
-		//select();
+		select();
 		//create();
 		//update();
 		//delete();

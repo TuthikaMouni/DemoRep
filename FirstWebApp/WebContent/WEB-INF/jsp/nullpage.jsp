@@ -4,14 +4,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Landing</title>
+<title>Insert title here</title>
 </head>
 <body>
- 	<h3>Student Login</h3>
-	<form action="processServlet" method="get">
-	Username : <input type="text" name="username" /><br/>
-	Password : <input type="password" name="pass"/><br/>
-	<input type="submit" value="Submit">
-	</form>
+<p style = "color:red;">please enter username and password</p>
 </body>
 </html>
