@@ -1,23 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns="http://java.sun.com/xml/ns/javaee" version="2.5">
-	<welcome-file-list>
-        <welcome-file>/WEB-INF/jsp/login.jsp</welcome-file>
-    </welcome-file-list>
-    <servlet>
-        <servlet-name>FirstServlet</servlet-name>
-        <servlet-class>com.pnb.first.FirstServlet</servlet-class>
-    </servlet>
-     <servlet-mapping>
-        <servlet-name>FirstServlet</servlet-name>
-        <url-pattern>/processServlet</url-pattern>
-    </servlet-mapping>
-    
-    <servlet>
-        <servlet-name>SecondServlet</servlet-name>
-        <servlet-class>com.pnb.first.SecondServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>SecondServlet</servlet-name>
-        <url-pattern>/processSecondServlet</url-pattern>
-    </servlet-mapping>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:web="http://xmlns.jcp.org/xml/ns/javaee" xmlns:web="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="3.1">
+  <welcome-file-list>
+    <welcome-file>/WEB-INF/jsp/login.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <servlet-name>LoginController</servlet-name>
+    <servlet-class>com.pnb.employee.LoginController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginController</servlet-name>
+    <url-pattern>/logincontroller</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>EmployeeController</servlet-name>
+    <servlet-class>com.pnb.employee.EmployeeController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>EmployeeController</servlet-name>
+    <url-pattern>/employeecontroller</url-pattern>
+  </servlet-mapping>
 </web-app>

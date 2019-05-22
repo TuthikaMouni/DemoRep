@@ -7,34 +7,8 @@
 <title>Failure</title>
 </head>
 <body>
+<jsp:include page="/WEB-INF/jsp/header.jsp"></jsp:include>
 <p style = "color:red;">Login failed !</p>
-<style type="text/css">
-.header {
-  padding: 8px;
-  text-align: center;
-  background: #0066cc;
-  color: white;
-  font-size: 10px;
-}
-</style>
-
-<div class="header">
-  <h1>Employee Details</h1>
-</div>
- <style>
-.footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: #e6ac00;
-  color: white;
-  text-align: center;
-}
-</style>
-
-<div class="footer">
-  <p>Copy Rights reserved-2019</p>
-</div>
 </body>
+<jsp:include page="/WEB-INF/jsp/footer.jsp"></jsp:include>
 </html>

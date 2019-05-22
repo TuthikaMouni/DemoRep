@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
@@ -10,12 +9,12 @@
 <jsp:include page="/WEB-INF/jsp/header.jsp"></jsp:include>
 
 <body>
-	<form action="processServlet" method="get"><br><br><br><br><br><br><br><br><br><br>
+	<form action="logincontroller" method="GET"><br><br><br><br><br><br><br><br><br><br>
 		<div align="center">
-			Username : <input type="text" name="username" id='t1'> <span id='uname'
-				style="display: none; color: red"></span><br>
-			<br> Password : <input type="password" name="pass" id='t2'> <span
-				id='pwd' style="display: none; color: red"></span>
+			Username : <input type="text" name="username" id='t1'> 
+			<span id='uname' style="display: none; color: red"></span><br><br> 
+			Password : <input type="password" name="pass" id='t2'> 
+			<span id='pwd' style="display: none; color: red"></span>
 		</div>
 		<br>
 		<div align="center">
