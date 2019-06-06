@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>MySecondWebApp</display-name>
+  <welcome-file-list>
+    <welcome-file>/WEB-INF/jsp/login.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+  	<servlet-name>RegisterController</servlet-name>
+  	<servlet-class>com.pnb.register.controller.RegisterController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>RegisterController</servlet-name>
+  	<url-pattern>/processRegister</url-pattern>
+  </servlet-mapping>
+  <servlet>
+  	<servlet-name>LoginController</servlet-name>
+  	<servlet-class>com.pnb.register.controller.LoginController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>LoginController</servlet-name>
+  	<url-pattern>/processLogin</url-pattern>
+  </servlet-mapping>
+  <servlet>
+  	<servlet-name>ResetPasswordController</servlet-name>
+  	<servlet-class>com.pnb.register.controller.ResetPasswordController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>ResetPasswordController</servlet-name>
+  	<url-pattern>/processResetPassword</url-pattern>
+  </servlet-mapping>
+  <servlet>
+  	<servlet-name>ExpensesController</servlet-name>
+  	<servlet-class>com.pnb.register.controller.ExpensesController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>ExpensesController</servlet-name>
+  	<url-pattern>/processExpenses</url-pattern>
+  </servlet-mapping>
+</web-app>
